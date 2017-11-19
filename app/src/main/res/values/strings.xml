@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">VideoEncDec</string>
+
+    <string name="encode">编码：</string>
+    <string name="is_encode">编码</string>
+    <string name="encoder_num">1</string>
+    <string name="encoder_frame">60</string>
+    <string name="encoder_bit">190000</string>
+    <string name="hint_encoder_num">路数</string>
+    <string name="hint_encoder_frame">帧率</string>
+    <string name="hint_encoder_bit">比特率kbps</string>
+
+
+    <string name="decode">解码：</string>
+    <string name="is_decode">解码</string>
+    <string name="decoder_num">1</string>
+    <string name="decoder_frame">60</string>
+    <string name="decoder_bit">15000</string>
+    <string name="hint_decoder_num">路数</string>
+    <string name="hint_decoder_frame">帧率</string>
+    <string name="hint_decoder_bit">比特率kbps</string>
+
+    <string name="btn_720">720</string>
+    <string name="btn_1080">1080</string>
+    <string name="btn_4k">4k</string>
+    <string name="checkbox_use_enc_ret">使用编码结果</string>
+    <string name="checkbox_big_view">单屏显示</string>
+    <string name="checkbox_use_same">重复使用某帧[300]</string>
+    <string name="h264">H264</string>
+    <string name="h265">H265</string>
+
+</resources>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/encode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/encode"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/edit_encoder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_encoder_num"
+                android:inputType="number"
+                android:text="@string/encoder_num" />
+
+            <EditText
+                android:id="@+id/edit_encoder_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_encoder_frame"
+                android:inputType="number"
+                android:text="@string/encoder_frame" />
+
+            <EditText
+                android:id="@+id/edit_encoder_bit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_encoder_bit"
+                android:inputType="number"
+                android:text="@string/encoder_bit" />
+
+            <CheckBox
+                android:id="@+id/is_enc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/is_encode" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/decode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/decode"
+                android:textColor="@color/colorAccent"/>
+
+            <EditText
+                android:id="@+id/edit_decoder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_decoder_num"
+                android:inputType="number"
+                android:text="@string/decoder_num" />
+
+            <EditText
+                android:id="@+id/edit_decoder_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_decoder_frame"
+                android:inputType="number"
+                android:text="@string/decoder_frame" />
+
+            <EditText
+                android:id="@+id/edit_decoder_bit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_decoder_bit"
+                android:inputType="number"
+                android:text="@string/decoder_bit" />
+
+            <CheckBox
+                android:id="@+id/is_dec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/is_decode" />
+
+            <CheckBox
+                android:id="@+id/is_same_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_use_enc_ret" />
+
+            <CheckBox
+                android:id="@+id/is_big_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_big_view" />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <RadioGroup
+            android:id="@+id/code_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_h264"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/h264" />
+
+            <RadioButton
+                android:id="@+id/radio_h265"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/h265" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/use_same_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_use_same" />
+
+        <Button
+            android:id="@+id/btn_720"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_720" />
+
+        <Button
+            android:id="@+id/btn_1080"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_1080" />
+
+        <Button
+            android:id="@+id/btn_4k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_4k" />
+
+        <TextView
+            android:id="@+id/cpu_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <SurfaceView
+                    android:id="@+id/video1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <SurfaceView
+                    android:id="@+id/video2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <SurfaceView
+                    android:id="@+id/video3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <SurfaceView
+                    android:id="@+id/video4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
